@@ -1,7 +1,4 @@
 {
     "chromeWebSecurity": false,
-    "env": {
-        "email": "u1604040@student.cuet.ac.bd",
-        "password": "syed12345"
-    }
+    
 }
