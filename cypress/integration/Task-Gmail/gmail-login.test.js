@@ -22,7 +22,7 @@ describe('Email Check', () => {
         cy.wait(3000)
 
         //input field of the password
-        cy.get('input[name="password"]').click({ force: true }).type('password')
+        cy.get('input[name="password"]').click({ force: true }).type('pass')
 
         //next to password
         cy.get('#passwordNext > .VfPpkd-dgl2Hf-ppHlrf-sM5MNb > .VfPpkd-LgbsSe > .VfPpkd-vQzf8d').click()
