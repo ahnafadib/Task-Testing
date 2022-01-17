@@ -5,10 +5,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
 })
 
-//used env file for securing email and password
-const email = Cypress.env('email')
-const password = Cypress.env('password')
-
 
 describe('Email Check', () => {
     it('testing', () => {
@@ -17,7 +13,7 @@ describe('Email Check', () => {
     })
     //input field of the username
     it('The webpage loads', () => {
-        cy.get('input[name="identifier"]').click({ force: true }).type(email)
+        cy.get('input[name="identifier"]').click({ force: true }).type('u1604040@student.cuet.ac.bd')
 
         //submit after giving user name
         cy.get('#identifierNext > .VfPpkd-dgl2Hf-ppHlrf-sM5MNb > .VfPpkd-LgbsSe > .VfPpkd-vQzf8d').click()
@@ -26,7 +22,7 @@ describe('Email Check', () => {
         cy.wait(3000)
 
         //input field of the password
-        cy.get('input[name="password"]').click({ force: true }).type(password)
+        cy.get('input[name="password"]').click({ force: true }).type('password')
 
         //next to password
         cy.get('#passwordNext > .VfPpkd-dgl2Hf-ppHlrf-sM5MNb > .VfPpkd-LgbsSe > .VfPpkd-vQzf8d').click()
